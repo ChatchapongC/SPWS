@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 import io
-import xlrd
 
-st.title("Excel Consolidate Tool")
+st.title("โปรแกรมแปลงไฟล์ Excel สำหรับ SPWS")
+st.write("โปรแกรมนี้ใช้สำหรับแปลงไฟล์ Excel ที่ได้จาก SPWS (ส่วนลด 34%) เพื่อเตรียมข้อมูลสำหรับการนำเข้าในระบบ Bigseller by DK")
 
-uploaded_files = st.file_uploader("แนบไฟล์ Excel (.xls) ได้หลายไฟล์", type=["xls", "xlsx"], accept_multiple_files=True)
+uploaded_files = st.file_uploader("แนบไฟล์ Excel (.xls, .xlsx) ได้หลายไฟล์พร้อมกัน", type=["xls", "xlsx"], accept_multiple_files=True)
 
 if uploaded_files:
     all_data = []
