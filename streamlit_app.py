@@ -18,7 +18,7 @@ if uploaded_files:
                 nan_count += 1
             else:
                 nan_count = 0
-            if nan_count > 1:
+            if nan_count > 2:
                 break
             rows_to_write.append(row)
         df_new = pd.DataFrame(rows_to_write)
